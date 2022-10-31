@@ -2,11 +2,11 @@
     'name': "School Management",
 
     'summary': """
-        App para gestión escolar
+        School Management Software
     """,
 
     'description': """
-        Gestión escolar para el registro de asignaturas, estudiantes y profesores.
+        School management for the registration of subjects, students and teachers.
     """,
 
     'author': "Nelson Daniel Cruz Camelo",
