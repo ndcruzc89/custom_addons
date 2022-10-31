@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+
+        <record id="school_student_view" model="ir.ui.view">
+            <field name="name">school.student.form</field>
+            <field name="model">school.student</field>
+            <field name="arch" type="xml">
+                <form string="Student">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="birth_date"/>
+                        </group>
+                        <group>
+                            <field name="age"/>
+                            <field name="final_exam_grade"/>
+                        </group>
+                        <group>
+                            <field name="subject_ids"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="school_student_tree_view" model="ir.ui.view">
+            <field name="name">school.student.tree</field>
+            <field name="model">school.student</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="birth_date" />
+                    <field name="age" />
+                    <field name="final_exam_grade" />
+                    <field name="subject_ids" optional="hide" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="school_student_action" model="ir.actions.act_window">
+            <field name="name">Student</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.student</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No students created yet.
+                </p>
+                <p>
+                    Enter a new student.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+
+        <record id="school_teacher_view" model="ir.ui.view">
+            <field name="name">school.teacher.form</field>
+            <field name="model">school.teacher</field>
+            <field name="arch" type="xml">
+                <form string="Teacher">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="profile"/>
+                        </group>
+                        <group>
+                            <field name="subject_ids"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="school_teacher_tree_view" model="ir.ui.view">
+            <field name="name">school.teacher.tree</field>
+            <field name="model">school.teacher</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="profile" />
+                    <field name="subject_ids" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="school_teacher_action" model="ir.actions.act_window">
+            <field name="name">Teacher</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.teacher</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No teachers created yet.
+                </p>
+                <p>
+                    Enter a new teacher.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
